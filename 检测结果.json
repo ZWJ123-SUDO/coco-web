@@ -1,0 +1,74 @@
+[
+  {
+    "width": 1440,
+    "sections": [
+      "home",
+      "story",
+      "characters",
+      "themes",
+      "gallery"
+    ],
+    "overflow": 0,
+    "brokenRefs": [],
+    "resources": [],
+    "trailer": "https://www.pixar.com/coco",
+    "duplicateIds": [],
+    "navigation": {
+      "hash": "#characters",
+      "top": 70.296875,
+      "current": "#characters"
+    },
+    "errors": []
+  },
+  {
+    "width": 768,
+    "sections": [
+      "home",
+      "story",
+      "characters",
+      "themes",
+      "gallery"
+    ],
+    "overflow": 0,
+    "brokenRefs": [],
+    "resources": [],
+    "trailer": "https://www.pixar.com/coco",
+    "duplicateIds": [],
+    "menuOpen": "true",
+    "menuClosed": "false",
+    "navigation": {
+      "hash": "#characters",
+      "top": 69.609375,
+      "current": "#characters"
+    },
+    "errors": []
+  },
+  {
+    "width": 375,
+    "sections": [
+      "home",
+      "story",
+      "characters",
+      "themes",
+      "gallery"
+    ],
+    "overflow": 0,
+    "brokenRefs": [],
+    "resources": [],
+    "trailer": "https://www.pixar.com/coco",
+    "duplicateIds": [],
+    "menuOpen": "true",
+    "menuClosed": "false",
+    "navigation": {
+      "hash": "#characters",
+      "top": 70.234375,
+      "current": "#characters"
+    },
+    "errors": []
+  },
+  {
+    "javascriptDisabled": true,
+    "storyVisible": "1",
+    "trailer": "https://www.pixar.com/coco"
+  }
+]

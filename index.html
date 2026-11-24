@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COCO 寻梦环游记 · 记住我，永远</title>
+<meta name="description" content="《寻梦环游记》(Coco) 电影宣传与主题分析网页 —— 剧情、人物、主题与视听，一门课程作业的完整呈现。">
+<meta name="author" content="Web 设计课程作业">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%23f0871f'/%3E%3Cg fill='%23fff3dc'%3E%3Ccircle cx='14' cy='16' r='4'/%3E%3Ccircle cx='26' cy='16' r='4'/%3E%3Cpath d='M20 21l-4 7h8z'/%3E%3C/g%3E%3Cg stroke='%23fff3dc' stroke-width='2'%3E%3Cpath d='M13 31h14M17 31v-4M23 31v-4'/%3E%3C/g%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip-link" href="#story">跳到主要内容</a>
+
+<!-- ============ 通用图形符号（原创手绘 SVG，全站复用） ============ -->
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- 万寿菊 -->
+    <symbol id="ic-marigold" viewBox="0 0 40 40">
+      <g transform="translate(20 20)">
+        <g fill="#f0871f">
+          <ellipse cx="0" cy="-12" rx="4.3" ry="8"/>
+          <ellipse cx="0" cy="-12" rx="4.3" ry="8" transform="rotate(45)"/>
+          <ellipse cx="0" cy="-12" rx="4.3" ry="8" transform="rotate(90)"/>
+          <ellipse cx="0" cy="-12" rx="4.3" ry="8" transform="rotate(135)"/>
+          <ellipse cx="0" cy="-12" rx="4.3" ry="8" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-12" rx="4.3" ry="8" transform="rotate(225)"/>
+          <ellipse cx="0" cy="-12" rx="4.3" ry="8" transform="rotate(270)"/>
+          <ellipse cx="0" cy="-12" rx="4.3" ry="8" transform="rotate(315)"/>
+        </g>
+        <circle r="7" fill="#e0701a"/>
+        <circle r="3" fill="#ffcf7a"/>
+      </g>
+    </symbol>
+    <!-- 吉他 -->
+    <symbol id="ic-guitar" viewBox="0 0 60 120">
+      <path d="M30 46c-12 0-21 9-21 21 0 8 5 13 5 19 0 6-6 8-6 14 0 10 10 18 22 18s22-8 22-18c0-6-6-8-6-14 0-6 5-11 5-19 0-12-9-21-21-21z" fill="#b8803f"/>
+      <path d="M30 52c-9 0-16 7-16 16 0 6 4 10 4 15 0 5-5 6-5 11 0 8 8 14 17 14s17-6 17-14c0-5-5-6-5-11 0-5 4-9 4-15 0-9-7-16-16-16z" fill="#c99356"/>
+      <circle cx="30" cy="86" r="9" fill="#3a220e"/>
+      <rect x="25" y="4" width="10" height="48" rx="5" fill="#6b3f1c"/>
+      <rect x="22" y="0" width="16" height="10" rx="4" fill="#3a220e"/>
+      <g stroke="#f6ead6" stroke-width="1.4" opacity=".7">
+        <path d="M26 14v70M30 14v70M34 14v70"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ 顶部进度条 ============ -->
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+<!-- ============ 导航栏 ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#home" aria-label="返回首页">
+      <svg class="brand-skull" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="14" cy="17" r="3.6" fill="currentColor"/>
+        <circle cx="26" cy="17" r="3.6" fill="currentColor"/>
+        <path d="M20 21l-3.4 6h6.8z" fill="currentColor"/>
+        <path d="M14 31h12M17.6 31v-3M22.4 31v-3" stroke="currentColor" stroke-width="1.8" fill="none"/>
+      </svg>
+      <span class="brand-text">
+        <b>COCO</b>
+        <i>寻梦环游记</i>
+      </span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+      <a href="#home" class="active">首页 <em>HOME</em></a>
+      <a href="#story">剧情 <em>STORY</em></a>
+      <a href="#characters">人物 <em>CHARACTERS</em></a>
+      <a href="#themes">主题 <em>THEMES</em></a>
+      <a href="#gallery">视听 <em>GALLERY</em></a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ 01 首页 HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-stars" aria-hidden="true"></div>
+    <div class="petals" id="petals" aria-hidden="true"></div>
+
+    <svg class="hero-city" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="cityGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3d1a4a"/>
+          <stop offset="100%" stop-color="#150c22"/>
+        </linearGradient>
+        <pattern id="cityLights" width="28" height="36" patternUnits="userSpaceOnUse">
+          <rect x="5" y="9" width="4" height="6" rx="1" fill="#ffc561" opacity=".55"/>
+          <rect x="18" y="21" width="3" height="5" rx="1" fill="#ff9d2e" opacity=".38"/>
+          <rect x="10" y="27" width="3" height="4" rx="1" fill="#ffe0a3" opacity=".3"/>
+        </pattern>
+      </defs>
+      <path id="cityPath" d="M0 320V210h44v-42h52v42h40v-70h22v-22h20v22h20v70h48v-38h50v64h48v-44h42v-30h40v74h50v-34h52v-58h22v-25h20v25h18v58h50v-30h58v54h50v-40h44v-34h40v74h50v-40h46v-32h40v70h50v-32h46v-28h40v70h28V320Z" fill="url(#cityGrad)"/>
+      <use href="#cityPath" fill="url(#cityLights)"/>
+    </svg>
+
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">2017 · Disney · Pixar · 第 90 届奥斯卡最佳动画长片</p>
+      <h1 class="hero-title">COCO</h1>
+      <p class="hero-sub">REMEMBER ME, FOREVER</p>
+      <p class="hero-cn">寻 梦 环 游 记</p>
+      <p class="hero-tagline">在记忆消失之前，请记住我。</p>
+      <p class="hero-lead">
+        一个热爱音乐的男孩，一座只在亡灵节夜晚出现的万寿菊桥，<br class="br-pc">
+        一段被谎言掩埋的家族往事。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#story">探索故事 <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-ghost" href="#gallery">观看预告 <span aria-hidden="true">▶</span></a>
+      </div>
+      <ul class="hero-meta">
+        <li><b>105</b> 分钟</li>
+        <li><b>墨西哥</b> 亡灵节</li>
+        <li><b>4</b> 代人 · 1 个家族</li>
+      </ul>
+    </div>
+
+    <div class="hero-bridge" aria-hidden="true">
+      <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+        <defs>
+          <pattern id="marigoldField" width="46" height="34" patternUnits="userSpaceOnUse">
+            <circle cx="9" cy="11" r="4.2" fill="#f0871f"/>
+            <circle cx="30" cy="25" r="3.4" fill="#ffb347"/>
+            <circle cx="19" cy="4" r="2.8" fill="#e0701a"/>
+            <circle cx="39" cy="9" r="3" fill="#ffcf7a"/>
+            <circle cx="12" cy="28" r="2.4" fill="#c2551a"/>
+            <circle cx="35" cy="15" r="2.2" fill="#ffe0a3"/>
+          </pattern>
+          <linearGradient id="fadeField" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="55%" stop-color="#fff" stop-opacity=".85"/>
+            <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="160" fill="url(#marigoldField)" mask="url(#fieldMask)"/>
+        <rect width="1440" height="160" fill="#1a0b22" opacity=".28" mask="url(#fieldMask)"/>
+        <mask id="fieldMask">
+          <rect width="1440" height="160" fill="url(#fadeField)"/>
+        </mask>
+      </svg>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true"><span></span>SCROLL</div>
+  </section>
+
+  <!-- ============ 02 剧情 STORY ============ -->
+  <section class="story" id="story">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num">01</span>
+        <div>
+          <h2 class="sec-title">STORY<span>剧情介绍</span></h2>
+          <p class="sec-desc">一夜之间，一个男孩走完了从“逃离家庭”到“理解家庭”的全部路程。</p>
+        </div>
+        <svg class="sec-flower" viewBox="0 0 40 40" aria-hidden="true"><use href="#ic-marigold"/></svg>
+      </header>
+
+      <div class="story-grid">
+        <div class="story-text">
+          <p class="lead reveal">
+            《寻梦环游记》（Coco）由李·昂克里奇（Lee Unkrich）与阿德里安·莫利纳（Adrian Molina）联合执导，
+            迪士尼·皮克斯于 2017 年推出。故事发生在墨西哥小镇圣塞西莉亚，以传统节日
+            <strong>亡灵节（Día de los Muertos）</strong>为背景，讲述 12 岁男孩米格在现实与亡灵世界之间往返的一夜。
+          </p>
+          <p class="reveal">
+            里维拉家族是镇上最好的鞋匠，却也有一条铁律：<strong>这个家不许有音乐</strong>。
+            曾曾祖父为了唱歌离家不返，曾曾祖母伊梅尔达从此把音乐视作抛弃的代名词。
+            米格偏偏爱上了吉他——亡灵节那天，奶奶当众砸碎了他亲手做的那把琴。
+            为了赶上广场上的才艺比赛，他闯进墓园里供奉“歌神”德拉库斯的纪念堂，
+            抱起了那把传说中的白色吉他。
+          </p>
+
+          <ol class="acts">
+            <li class="act reveal">
+              <span class="act-no">第一幕</span>
+              <h3>现实世界：被禁止的音符</h3>
+              <p>
+                擦鞋、做鞋、继承鞋坊——家人为米格安排好了完整的一生。他躲在阁楼里看歌神的录像带，
+                自学指法，偷偷把吉他藏进夹层。当奶奶砸碎他的琴，他那句“我才不要做鞋”成了整部电影的第一道裂缝。
+              </p>
+            </li>
+            <li class="act reveal">
+              <span class="act-no">第二幕</span>
+              <h3>亡灵世界：万寿菊桥的那一边</h3>
+              <p>
+                弹响歌神的吉他，米格在月光下变成了“看不见的活人”。他踩着万寿菊花瓣铺成的桥进入亡灵之城，
+                遇见牛皮糖一样的落魄亡灵埃克托，混进才艺比赛，又被家族亡灵一路“追捕”。
+                要回到人间，他必须在天亮前得到家人的<strong>祝福</strong>——而每一句祝福都附带着条件。
+              </p>
+            </li>
+            <li class="act reveal">
+              <span class="act-no">第三幕</span>
+              <h3>真相与回归：请记住我</h3>
+              <p>
+                歌神的光环被撕开：他毒死了搭档埃克托，偷走了他的歌与名声。
+                而埃克托才是米格的曾曾祖父，是那个弹着吉他唱《Remember Me》哄女儿入睡的父亲。
+                当可可的记忆正在退潮，米格抱着吉他坐到她面前——一首摇篮曲，把整个家族的记忆重新点亮。
+              </p>
+            </li>
+          </ol>
+
+          <blockquote class="pull reveal">
+            真正的死亡，是世界上再没有一个人记得你。
+            <cite>—— 影片台词（中文意译）</cite>
+          </blockquote>
+        </div>
+
+        <aside class="story-art reveal">
+          <figure class="art-card">
+            <!-- 万寿菊桥 · 原创插画 -->
+            <svg viewBox="0 0 520 660" role="img" aria-label="万寿菊桥插画：花瓣铺成的桥通向灯火通明的亡灵之城">
+              <defs>
+                <linearGradient id="artSky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1b0f2c"/>
+                  <stop offset="55%" stop-color="#3a1550"/>
+                  <stop offset="100%" stop-color="#6d1f3c"/>
+                </linearGradient>
+                <linearGradient id="artBridge" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#7a2f0d"/>
+                  <stop offset="45%" stop-color="#f0871f"/>
+                  <stop offset="100%" stop-color="#ffcf7a"/>
+                </linearGradient>
+                <radialGradient id="artHalo" cx="50%" cy="50%">
+                  <stop offset="0%" stop-color="#ffb347" stop-opacity=".75"/>
+                  <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+
+              <rect width="520" height="660" fill="url(#artSky)"/>
+              <circle cx="150" cy="180" r="150" fill="url(#artHalo)"/>
+              <circle cx="150" cy="176" r="34" fill="#ffe9bd"/>
+              <circle cx="138" cy="166" r="10" fill="#f6d79a" opacity=".6"/>
+              <circle cx="160" cy="186" r="7" fill="#f6d79a" opacity=".5"/>
+
+              <g fill="#ffe9bd" opacity=".85">
+                <circle cx="330" cy="70" r="2.4"/><circle cx="392" cy="118" r="1.8"/>
+                <circle cx="452" cy="62" r="2.6"/><circle cx="262" cy="120" r="1.6"/>
+                <circle cx="486" cy="150" r="2"/><circle cx="300" cy="44" r="1.8"/>
+              </g>
+
+              <!-- 亡灵之城剪影 -->
+              <g fill="#160d22" opacity=".92">
+                <rect x="286" y="300" width="26" height="140"/>
+                <path d="M299 300c0-26 14-26 14-46 0 20-14 20-14 46z"/>
+                <rect x="330" y="330" width="34" height="110"/>
+                <path d="M330 330a17 17 0 0 1 34 0z"/>
+                <rect x="382" y="286" width="22" height="154"/>
+                <path d="M404 286c0-24 10-38 10-38s-10 14-10 38z"/>
+                <rect x="420" y="340" width="40" height="100"/>
+                <path d="M420 340a20 12 0 0 1 40 0z"/>
+                <rect x="474" y="308" width="26" height="132"/>
+                <path d="M487 308c0-30 12-30 12-52 0 22-12 22-12 52z"/>
+              </g>
+              <g fill="#ffc561" opacity=".55">
+                <rect x="292" y="330" width="4" height="9"/><rect x="302" y="356" width="4" height="9"/>
+                <rect x="338" y="352" width="4" height="8"/><rect x="352" y="378" width="4" height="8"/>
+                <rect x="388" y="312" width="4" height="8"/><rect x="396" y="350" width="4" height="8"/>
+                <rect x="430" y="366" width="4" height="8"/><rect x="448" y="392" width="4" height="8"/>
+                <rect x="480" y="330" width="4" height="8"/><rect x="492" y="366" width="4" height="8"/>
+              </g>
+
+              <!-- 万寿菊桥 -->
+              <path d="M-20 560C120 470 300 440 540 470" stroke="url(#artBridge)" stroke-width="58" fill="none" stroke-linecap="round"/>
+              <path d="M-20 552C120 462 300 432 540 462" stroke="#ffd79a" stroke-width="6" fill="none" opacity=".65"/>
+              <!-- 桥上的花瓣点 -->
+              <g fill="#ffcf7a" opacity=".9">
+                <circle cx="60" cy="524" r="5"/><circle cx="120" cy="500" r="4"/>
+                <circle cx="180" cy="482" r="4.6"/><circle cx="240" cy="470" r="3.8"/>
+                <circle cx="300" cy="462" r="4.4"/><circle cx="360" cy="460" r="3.6"/>
+                <circle cx="430" cy="464" r="4.2"/><circle cx="490" cy="472" r="3.4"/>
+                <circle cx="150" cy="512" r="3"/><circle cx="330" cy="450" r="3"/>
+              </g>
+
+              <!-- 花瓣飘落 -->
+              <g fill="#f0871f">
+                <ellipse cx="80" cy="260" rx="7" ry="12" transform="rotate(24 80 260)"/>
+                <ellipse cx="210" cy="330" rx="6" ry="10" transform="rotate(-18 210 330)" opacity=".8"/>
+                <ellipse cx="420" cy="240" rx="5" ry="9" transform="rotate(36 420 240)" opacity=".7"/>
+                <ellipse cx="470" cy="430" rx="6" ry="10" transform="rotate(-30 470 430)" opacity=".75"/>
+                <ellipse cx="120" cy="390" rx="5" ry="8" transform="rotate(12 120 390)" opacity=".6"/>
+              </g>
+
+              <!-- 小身影 -->
+              <g transform="translate(196 470)">
+                <path d="M-9 0h18l4 26h-26z" fill="#241a2a"/>
+                <circle cx="0" cy="-10" r="9" fill="#241a2a"/>
+                <rect x="-14" y="4" width="8" height="18" rx="4" fill="#241a2a"/>
+              </g>
+
+              <rect y="596" width="520" height="64" fill="#1d0f2b"/>
+              <rect y="596" width="520" height="4" fill="#7a2f0d" opacity=".6"/>
+              <g fill="#f0871f" opacity=".55">
+                <circle cx="30" cy="618" r="5"/><circle cx="86" cy="636" r="3.6"/>
+                <circle cx="150" cy="612" r="4.4"/><circle cx="214" cy="640" r="3.2"/>
+                <circle cx="286" cy="616" r="4.8"/><circle cx="350" cy="636" r="3.4"/>
+                <circle cx="418" cy="614" r="4.2"/><circle cx="482" cy="638" r="3.6"/>
+              </g>
+              <g fill="#ffcf7a" opacity=".35">
+                <circle cx="58" cy="628" r="2.4"/><circle cx="182" cy="626" r="2"/>
+                <circle cx="320" cy="628" r="2.2"/><circle cx="452" cy="626" r="2"/>
+              </g>
+            </svg>
+            <figcaption>
+              <b>万寿菊桥</b>
+              <span>Marigold Bridge / Puente de Flores</span>
+              在墨西哥传统中，万寿菊的花瓣与香气会为亡魂引路。影片把它具象成一座只在亡灵节夜晚亮起的桥。
+            </figcaption>
+          </figure>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 人物 CHARACTERS ============ -->
+  <section class="chars" id="characters">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num">02</span>
+        <div>
+          <h2 class="sec-title">CHARACTERS<span>主要人物</span></h2>
+          <p class="sec-desc">六个人物，四种关系：家人、搭档、偶像，以及一条不会说话的狗。</p>
+        </div>
+        <svg class="sec-flower" viewBox="0 0 40 40" aria-hidden="true"><use href="#ic-marigold"/></svg>
+      </header>
+
+      <div class="char-grid">
+
+        <!-- 米格 -->
+        <article class="char-card reveal" style="--accent:#b8392b">
+          <div class="portrait" data-tint="#f7e6c6">
+            <svg viewBox="0 0 240 250" role="img" aria-label="米格插画">
+              <circle cx="120" cy="122" r="112" fill="#f7e6c6"/>
+              <circle cx="120" cy="118" r="90" fill="#fff3dc"/>
+              <path d="M38 250c0-50 36-80 82-80s82 30 82 80z" fill="#b8392b"/>
+              <path d="M120 176v74" stroke="#8f2b1f" stroke-width="6"/>
+              <path d="M96 180l24 26 24-26" fill="none" stroke="#f7e6c6" stroke-width="7" stroke-linecap="round"/>
+              <rect x="104" y="146" width="32" height="40" rx="15" fill="#c98a5b"/>
+              <ellipse cx="120" cy="108" rx="52" ry="56" fill="#d9a06b"/>
+              <circle cx="66" cy="114" r="11" fill="#d9a06b"/>
+              <circle cx="174" cy="114" r="11" fill="#d9a06b"/>
+              <path d="M64 124C64 28 176 28 176 124c0-26-10-38-24-30-8 5-16-14-32-12-16 2-22 18-32 12-12-8-24 4-24 30z" fill="#221a1c"/>
+              <ellipse cx="103" cy="110" rx="4.6" ry="6.2" fill="#2a1a1a"/>
+              <ellipse cx="137" cy="110" rx="4.6" ry="6.2" fill="#2a1a1a"/>
+              <circle cx="104.5" cy="108" r="1.6" fill="#fff" opacity=".9"/>
+              <circle cx="138.5" cy="108" r="1.6" fill="#fff" opacity=".9"/>
+              <path d="M95 98q8-6 16-1M129 97q8-5 16 1" stroke="#221a1c" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M120 112v9q0 5 5 5" stroke="#b57a4e" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+              <path d="M104 136q16 14 32 0" stroke="#8a4a2c" stroke-width="4.4" fill="none" stroke-linecap="round"/>
+              <circle cx="90" cy="128" r="7.5" fill="#e08a5f" opacity=".4"/>
+              <circle cx="150" cy="128" r="7.5" fill="#e08a5f" opacity=".4"/>
+            </svg>
+          </div>
+          <div class="char-body">
+            <h3>米格 <span>Miguel Rivera</span></h3>
+            <p class="char-role">主角 · 12 岁 · 里维拉家第四代</p>
+            <p class="char-quote">“我想成为音乐家，就像德拉库斯那样。”</p>
+            <p class="char-desc">出身鞋匠世家，家族四代禁止音乐，他却偷偷练吉他。固执、天真，也愿意为真相付出代价。</p>
+            <ul class="tags"><li>梦想</li><li>叛逆</li><li>成长</li></ul>
+          </div>
+        </article>
+
+        <!-- 埃克托 -->
+        <article class="char-card reveal" style="--accent:#6b3f8f">
+          <div class="portrait" data-tint="#e9ddf0">
+            <svg viewBox="0 0 240 250" role="img" aria-label="埃克托插画">
+              <circle cx="120" cy="122" r="112" fill="#e9ddf0"/>
+              <circle cx="120" cy="118" r="90" fill="#f7f0fb"/>
+              <path d="M34 250c0-52 38-82 86-82s86 30 86 82z" fill="#6a4b8e"/>
+              <path d="M96 178l24 26 24-26" fill="none" stroke="#f2ece1" stroke-width="8" stroke-linecap="round"/>
+              <rect x="106" y="166" width="28" height="24" rx="10" fill="#e0d6c8"/>
+              <rect x="88" y="112" width="64" height="62" rx="26" fill="#f4efe6"/>
+              <ellipse cx="120" cy="104" rx="52" ry="54" fill="#f4efe6"/>
+              <ellipse cx="101" cy="100" rx="15" ry="17" fill="#241a2a"/>
+              <ellipse cx="139" cy="100" rx="15" ry="17" fill="#241a2a"/>
+              <circle cx="105" cy="96" r="3.4" fill="#fff" opacity=".85"/>
+              <circle cx="143" cy="96" r="3.4" fill="#fff" opacity=".85"/>
+              <path d="M120 112l-8 15h16z" fill="#241a2a"/>
+              <rect x="96" y="136" width="48" height="16" rx="5" fill="#241a2a"/>
+              <g fill="#f4efe6">
+                <rect x="101" y="136" width="4.5" height="16"/>
+                <rect x="112" y="136" width="4.5" height="16"/>
+                <rect x="123" y="136" width="4.5" height="16"/>
+                <rect x="134" y="136" width="4.5" height="16"/>
+              </g>
+              <path d="M70 96C66 50 174 50 170 96c-4-24-22-38-50-38s-46 14-50 38z" fill="#241a2a"/>
+              <ellipse cx="120" cy="58" rx="74" ry="14" fill="#3a2b44"/>
+              <path d="M86 58C86 24 154 24 154 58z" fill="#3a2b44"/>
+              <path d="M86 46h68v10H86z" fill="#8f6fb0"/>
+              <circle cx="120" cy="30" r="4" fill="#c8aede"/>
+            </svg>
+          </div>
+          <div class="char-body">
+            <h3>埃克托 <span>Héctor</span></h3>
+            <p class="char-role">落魄亡灵 · 米格的曾曾祖父</p>
+            <p class="char-quote">“记住我，虽然我不得不远行。”</p>
+            <p class="char-desc">生前是音乐家，被搭档毒杀后又被世界遗忘。他乔装混过安检、借吉他、耍小聪明，只为在消失前再见女儿一面。</p>
+            <ul class="tags"><li>父爱</li><li>被遗忘</li><li>真相</li></ul>
+          </div>
+        </article>
+
+        <!-- 可可 -->
+        <article class="char-card reveal" style="--accent:#c96f7a">
+          <div class="portrait" data-tint="#f3e3d8">
+            <svg viewBox="0 0 240 250" role="img" aria-label="可可插画">
+              <circle cx="120" cy="122" r="112" fill="#f3e3d8"/>
+              <circle cx="120" cy="118" r="90" fill="#fdf5ec"/>
+              <circle cx="120" cy="44" r="23" fill="#efe8dd"/>
+              <circle cx="120" cy="90" r="58" fill="#efe8dd"/>
+              <ellipse cx="120" cy="112" rx="44" ry="48" fill="#d9a06b"/>
+              <path d="M76 98C74 62 166 62 164 98c-4-18-22-28-44-28s-40 10-44 28z" fill="#efe8dd"/>
+              <path d="M96 110q8 6 16 0M128 110q8 6 16 0" stroke="#6b4a2e" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+              <path d="M93 100q9-6 18-1M129 99q9-5 18 1" stroke="#b8a99a" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+              <path d="M120 116v8q0 4 4 4" stroke="#b57a4e" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M108 138q12 10 24 0" stroke="#8a4a2c" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+              <g stroke="#b57a4e" stroke-width="2" opacity=".45" fill="none" stroke-linecap="round">
+                <path d="M86 126q6 4 10 2M154 126q-6 4-10 2M104 92q4-3 8-2M136 90q4-1 8 2"/>
+              </g>
+              <circle cx="88" cy="132" r="8" fill="#d97a5f" opacity=".35"/>
+              <circle cx="152" cy="132" r="8" fill="#d97a5f" opacity=".35"/>
+              <path d="M34 250c0-52 38-82 86-82s86 30 86 82z" fill="#f0e2cf"/>
+              <path d="M34 250c2-44 20-70 44-80l42 78 42-78c24 10 42 36 44 80z" fill="#c96f7a"/>
+              <g fill="#f6e3c0" opacity=".7">
+                <circle cx="70" cy="206" r="4"/><circle cx="96" cy="226" r="3.4"/>
+                <circle cx="170" cy="206" r="4"/><circle cx="146" cy="228" r="3.4"/>
+                <circle cx="120" cy="238" r="3.2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="char-body">
+            <h3>可可 <span>Mamá Coco</span></h3>
+            <p class="char-role">米格的曾祖母 · 影片的同名者</p>
+            <p class="char-quote">“爸爸说，他会回来。”</p>
+            <p class="char-desc">她坐在摇椅上，记忆正在退潮，却把父亲的信和照片在抽屉里藏了一辈子。整部电影的钥匙，握在她手里。</p>
+            <ul class="tags"><li>记忆</li><li>等待</li><li>钥匙人物</li></ul>
+          </div>
+        </article>
+
+        <!-- 伊梅尔达 -->
+        <article class="char-card reveal" style="--accent:#5c3a86">
+          <div class="portrait" data-tint="#e8d9ef">
+            <svg viewBox="0 0 240 250" role="img" aria-label="伊梅尔达插画">
+              <circle cx="120" cy="122" r="112" fill="#e8d9ef"/>
+              <circle cx="120" cy="118" r="90" fill="#f8f0fc"/>
+              <circle cx="120" cy="42" r="21" fill="#1f1520"/>
+              <path d="M54 158C54 48 186 48 186 158z" fill="#1f1520"/>
+              <path d="M64 150c0-70 112-70 112 0" fill="none" stroke="#2e2030" stroke-width="6" opacity=".55"/>
+              <rect x="90" y="112" width="60" height="60" rx="24" fill="#f4efe6"/>
+              <ellipse cx="120" cy="102" rx="48" ry="52" fill="#f4efe6"/>
+              <ellipse cx="102" cy="98" rx="14" ry="16" fill="#241a2a"/>
+              <ellipse cx="138" cy="98" rx="14" ry="16" fill="#241a2a"/>
+              <circle cx="106" cy="94" r="3.2" fill="#fff" opacity=".85"/>
+              <circle cx="142" cy="94" r="3.2" fill="#fff" opacity=".85"/>
+              <path d="M93 78l22 7M147 78l-22 7" stroke="#1f1520" stroke-width="5.5" stroke-linecap="round"/>
+              <path d="M120 110l-7 14h14z" fill="#241a2a"/>
+              <rect x="98" y="134" width="44" height="15" rx="5" fill="#241a2a"/>
+              <g fill="#f4efe6">
+                <rect x="102" y="134" width="4" height="15"/>
+                <rect x="112" y="134" width="4" height="15"/>
+                <rect x="122" y="134" width="4" height="15"/>
+                <rect x="132" y="134" width="4" height="15"/>
+              </g>
+              <path d="M34 250c0-52 38-82 86-82s86 30 86 82z" fill="#5c3a86"/>
+              <path d="M96 172l24 24 24-24" fill="none" stroke="#f0e6d2" stroke-width="7" stroke-linecap="round"/>
+              <g fill="#f0871f" opacity=".9">
+                <circle cx="70" cy="214" r="5"/><circle cx="96" cy="232" r="4"/>
+                <circle cx="170" cy="214" r="5"/><circle cx="144" cy="232" r="4"/>
+                <circle cx="120" cy="240" r="4.4"/>
+              </g>
+              <use href="#ic-marigold" x="146" y="36" width="34" height="34"/>
+            </svg>
+          </div>
+          <div class="char-body">
+            <h3>伊梅尔达 <span>Mamá Imelda</span></h3>
+            <p class="char-role">曾曾祖母 · 家族族长</p>
+            <p class="char-quote">“你可以不碰音乐，但你必须回家。”</p>
+            <p class="char-desc">被丈夫抛下后，她独自撑起鞋坊，把禁令写进家规。那句“祝福”从有条件的变成无条件的，是全片情感的转折点。</p>
+            <ul class="tags"><li>创伤</li><li>和解</li><li>家族</li></ul>
+          </div>
+        </article>
+
+        <!-- 德拉库斯 -->
+        <article class="char-card reveal" style="--accent:#d9a63c">
+          <div class="portrait" data-tint="#f0e2c4">
+            <svg viewBox="0 0 240 250" role="img" aria-label="德拉库斯插画">
+              <circle cx="120" cy="122" r="112" fill="#f0e2c4"/>
+              <circle cx="120" cy="118" r="90" fill="#fff8e8"/>
+              <path d="M34 250c0-52 38-82 86-82s86 30 86 82z" fill="#241a2a"/>
+              <path d="M108 176l12 30 12-30z" fill="#f0e6d2"/>
+              <path d="M112 200l8 12 8-12-8-6z" fill="#a8342a"/>
+              <path d="M40 250c0-40 16-64 40-74l40 60 40-60c24 10 40 34 40 74z" fill="#241a2a"/>
+              <path d="M78 186l42 66M162 186l-42 66" stroke="#d9a63c" stroke-width="5" fill="none"/>
+              <rect x="88" y="112" width="64" height="62" rx="26" fill="#f4efe6"/>
+              <ellipse cx="120" cy="104" rx="52" ry="54" fill="#f4efe6"/>
+              <ellipse cx="101" cy="96" rx="13.5" ry="15" fill="#241a2a"/>
+              <ellipse cx="139" cy="96" rx="13.5" ry="15" fill="#241a2a"/>
+              <circle cx="105" cy="92" r="3.2" fill="#fff" opacity=".85"/>
+              <circle cx="143" cy="92" r="3.2" fill="#fff" opacity=".85"/>
+              <path d="M100 128q11-8 20 0M140 128q-11-8-20 0" stroke="#241a2a" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <rect x="98" y="138" width="44" height="15" rx="5" fill="#241a2a"/>
+              <g fill="#f4efe6">
+                <rect x="102" y="138" width="4" height="15"/>
+                <rect x="112" y="138" width="4" height="15"/>
+                <rect x="122" y="138" width="4" height="15"/>
+                <rect x="132" y="138" width="4" height="15"/>
+              </g>
+              <ellipse cx="120" cy="72" rx="88" ry="16" fill="#241a2a"/>
+              <ellipse cx="120" cy="72" rx="88" ry="16" fill="none" stroke="#d9a63c" stroke-width="3"/>
+              <path d="M78 72C78 22 162 22 162 72z" fill="#241a2a"/>
+              <path d="M78 60h84v12H78z" fill="#d9a63c" opacity=".85"/>
+              <g fill="#d9a63c">
+                <circle cx="94" cy="36" r="3"/><circle cx="108" cy="30" r="2.6"/>
+                <circle cx="120" cy="28" r="3.4"/><circle cx="132" cy="30" r="2.6"/>
+                <circle cx="146" cy="36" r="3"/>
+              </g>
+            </svg>
+          </div>
+          <div class="char-body">
+            <h3>德拉库斯 <span>Ernesto de la Cruz</span></h3>
+            <p class="char-role">传奇歌神 · 反派</p>
+            <p class="char-quote">“抓住你的时刻！”</p>
+            <p class="char-desc">墨西哥最受欢迎的歌神，死后仍被供奉在万神殿。光鲜的偶像叙事之下，是剽窃、谎言与一场谋杀。</p>
+            <ul class="tags"><li>偶像神话</li><li>野心</li><li>谎言</li></ul>
+          </div>
+        </article>
+
+        <!-- 但丁 -->
+        <article class="char-card reveal" style="--accent:#8d7264">
+          <div class="portrait" data-tint="#e6ded2">
+            <svg viewBox="0 0 240 250" role="img" aria-label="但丁插画">
+              <circle cx="120" cy="122" r="112" fill="#e6ded2"/>
+              <circle cx="120" cy="118" r="90" fill="#f8f2e9"/>
+              <ellipse cx="120" cy="218" rx="56" ry="38" fill="#8d7264"/>
+              <rect x="86" y="242" width="14" height="16" rx="6" fill="#6b5248"/>
+              <rect x="142" y="242" width="14" height="16" rx="6" fill="#6b5248"/>
+              <ellipse cx="64" cy="158" rx="14" ry="28" transform="rotate(16 64 158)" fill="#6b5248"/>
+              <path d="M150 120c6-16 20-22 28-17 5 8-1 19-8 27z" fill="#6b5248"/>
+              <ellipse cx="120" cy="148" rx="50" ry="47" fill="#8d7264"/>
+              <ellipse cx="120" cy="180" rx="28" ry="18" fill="#a98c7c"/>
+              <ellipse cx="120" cy="170" rx="9" ry="7" fill="#3a2b2a"/>
+              <path d="M112 187h16v16a8 8 0 0 1-16 0z" fill="#d96a7a"/>
+              <circle cx="101" cy="142" r="8" fill="#241a2a"/>
+              <circle cx="139" cy="142" r="8" fill="#241a2a"/>
+              <circle cx="103.5" cy="139" r="2.6" fill="#fff" opacity=".9"/>
+              <circle cx="141.5" cy="139" r="2.6" fill="#fff" opacity=".9"/>
+              <path d="M92 130q9-6 18-2M130 128q9-4 18 2" stroke="#5b443a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+              <g fill="#6b5248" opacity=".65">
+                <circle cx="98" cy="160" r="8"/><circle cx="146" cy="166" r="6.5"/>
+                <circle cx="78" cy="196" r="9"/><circle cx="158" cy="206" r="7"/>
+              </g>
+            </svg>
+          </div>
+          <div class="char-body">
+            <h3>但丁 <span>Dante</span></h3>
+            <p class="char-role">米格的伙伴 · 亡灵向导</p>
+            <p class="char-quote">“汪——”</p>
+            <p class="char-desc">一只墨西哥无毛犬（Xoloitzcuintli），看着笨拙、贪吃、总在关键时刻捣乱，其实是能穿越生死的 alebrije，也是米格在亡灵世界的第一个同行者。</p>
+            <ul class="tags"><li>陪伴</li><li>向导</li><li>喜剧调剂</li></ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 人物关系图 -->
+      <div class="relation reveal">
+        <h3 class="relation-title">里维拉家族 · 人物关系</h3>
+        <p class="relation-sub">横轴是生死，纵轴是四代人。虚线代表被误认或被隐瞒的关系。</p>
+        <div class="relation-scroll">
+          <svg class="relation-svg" viewBox="0 0 1000 480" role="img" aria-label="人物关系图：埃克托与伊梅尔达为夫妻，女儿可可，曾孙米格；德拉库斯是埃克托的昔日搭档并冒名顶替；但丁是米格的守护灵犬">
+            <g stroke="#c9a87c" stroke-width="2" fill="none">
+              <path d="M280 94h120"/>
+              <path d="M340 94v106"/>
+              <path d="M340 276v74"/>
+            </g>
+            <g stroke="#b07a4a" stroke-width="2" stroke-dasharray="6 7" fill="none">
+              <path d="M185 56V28h610v28"/>
+              <path d="M435 388h265"/>
+            </g>
+
+            <g font-size="13" fill="#8a6a45" text-anchor="middle">
+              <text x="340" y="86" fill="#b8392b">夫妻</text>
+              <text x="392" y="152" text-anchor="start">女儿</text>
+              <text x="392" y="320" text-anchor="start">曾孙</text>
+              <text x="490" y="20">昔日搭档 · 冒名顶替</text>
+              <text x="567" y="378">守护 · 陪伴</text>
+            </g>
+
+            <!-- 节点 -->
+            <g class="node">
+              <rect x="90" y="56" width="190" height="76" rx="14"/>
+              <text x="185" y="92" class="node-name">埃克托</text>
+              <text x="185" y="114" class="node-en">Héctor · 曾曾祖父</text>
+            </g>
+            <g class="node">
+              <rect x="400" y="56" width="190" height="76" rx="14"/>
+              <text x="495" y="92" class="node-name">伊梅尔达</text>
+              <text x="495" y="114" class="node-en">Mamá Imelda · 曾曾祖母</text>
+            </g>
+            <g class="node">
+              <rect x="245" y="200" width="190" height="76" rx="14"/>
+              <text x="340" y="236" class="node-name">可可</text>
+              <text x="340" y="258" class="node-en">Mamá Coco · 曾祖母</text>
+            </g>
+            <g class="node">
+              <rect x="245" y="350" width="190" height="76" rx="14"/>
+              <text x="340" y="386" class="node-name">米格</text>
+              <text x="340" y="408" class="node-en">Miguel · 曾孙</text>
+            </g>
+            <g class="node">
+              <rect x="700" y="56" width="190" height="76" rx="14"/>
+              <text x="795" y="92" class="node-name">德拉库斯</text>
+              <text x="795" y="114" class="node-en">De la Cruz · 歌神</text>
+            </g>
+            <g class="node">
+              <rect x="700" y="350" width="190" height="76" rx="14"/>
+              <text x="795" y="386" class="node-name">但丁</text>
+              <text x="795" y="408" class="node-en">Dante · 守护灵犬</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 主题 THEMES ============ -->
+  <section class="themes" id="themes">
+    <div class="wrap">
+      <header class="sec-head light reveal">
+        <span class="sec-num">03</span>
+        <div>
+          <h2 class="sec-title">THEMES<span>主题分析</span></h2>
+          <p class="sec-desc">它不只讲一个男孩追梦，更在讲“人为什么会消失”。</p>
+        </div>
+      </header>
+
+      <div class="themes-type reveal" aria-hidden="true">
+        <span class="t-family">FAMILY</span>
+        <span class="divider-sm"></span>
+        <span class="t-dreams">DREAMS</span>
+        <span class="divider-sm"></span>
+        <span class="t-memories">MEMORIES</span>
+      </div>
+
+      <div class="theme-grid">
+        <article class="theme-col reveal">
+          <span class="theme-no">01</span>
+          <h3>亲情 · 家人是记忆的起点</h3>
+          <p>
+            里维拉家的禁令并不是“讨厌音乐”，而是一道伤口：伊梅尔达被丈夫留在原地，
+            于是把“音乐”和“抛弃”划上等号，再用四代人的沉默去覆盖它。
+          </p>
+          <p>
+            影片真正的冲突不是“梦想 vs 家庭”，而是<strong>家庭如何面对自己受过的伤</strong>。
+            当伊梅尔达给予米格不再附带禁乐条件的祝福时，家人的支持终于容得下他的梦想。
+          </p>
+          <p class="theme-note">关键词：家规 / 创伤的代际传递 / 无条件的祝福</p>
+        </article>
+
+        <article class="theme-col reveal">
+          <span class="theme-no">02</span>
+          <h3>梦想 · 梦想不是逃离的借口</h3>
+          <p>
+            电影安排了两种“追梦者”作为对照。德拉库斯高喊“抓住你的时刻”，把成功建立在剽窃与抛弃之上；
+            埃克托为女儿写了一首摇篮曲，从未登上更大的舞台。
+          </p>
+          <p>
+            米格在两者之间做选择：他要弹琴，但不要成为踩着别人往上爬的人。
+            <strong>梦想的价值不在于多响亮，而在于它为谁而唱。</strong>
+          </p>
+          <p class="theme-note">关键词：成功学批判 / 偶像祛魅 / 为谁而唱</p>
+        </article>
+
+        <article class="theme-col reveal">
+          <span class="theme-no">03</span>
+          <h3>记忆 · 记住，是一种延续</h3>
+          <p>
+            祭坛上的照片、抽屉里的信、一首只有两个人听过的歌——影片把“记忆”做成了可见的物件：
+            没有照片就过不了桥，没有活人记得就会化作金色的光散去。
+          </p>
+          <p>
+            它也区分了两种记忆：德拉库斯篡改的是<strong>被记录的历史</strong>，
+            可可珍藏的是<strong>被爱过的记忆</strong>。前者可以被伪造，后者只能被守护。
+          </p>
+          <p class="theme-note">关键词：存在与遗忘 / 物证 / 口述与传承</p>
+        </article>
+      </div>
+
+      <div class="death-block reveal">
+        <h3 class="death-title">从三个层面理解死亡与记忆</h3>
+        <p>以下三个层面是本页的阅读分析框架，并非电影原台词，也不代表墨西哥文化的统一死亡观。影片直接呈现的核心设定是：当生者不再记得亡者，亡者便会最终消失。</p>
+        <ol class="death-steps">
+          <li>
+            <span class="death-idx">一</span>
+            <h4>肉体的死亡</h4>
+            <p>呼吸停止，心跳结束——这是生物学意义上的终点。</p>
+          </li>
+          <li>
+            <span class="death-idx">二</span>
+            <h4>社会身份的死亡</h4>
+            <p>葬礼结束，名字从工作与关系中被划去，人们不再提起你做过什么。</p>
+          </li>
+          <li>
+            <span class="death-idx">三</span>
+            <h4>终极死亡</h4>
+            <p>世上最后一个记得你的人把你忘记——这才是影片所说的“真正的消失”。</p>
+          </li>
+        </ol>
+        <p class="death-summary">
+          于是“记住”变成一种伦理责任：我们记住某个人，就是拒绝让他消失。
+          在本页的理解中，影片借亡灵节的家庭团聚，表达了对亲人和共同记忆的珍惜。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 视听 GALLERY ============ -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <span class="sec-num">04</span>
+        <div>
+          <h2 class="sec-title">GALLERY<span>视听展示</span></h2>
+          <p class="sec-desc">色彩、音乐与光影，构成了这部电影的第二套语言。</p>
+        </div>
+        <svg class="sec-flower" viewBox="0 0 40 40" aria-hidden="true"><use href="#ic-marigold"/></svg>
+      </header>
+
+      <div class="bento">
+
+        <!-- 1 万寿菊桥 -->
+        <figure class="tile t-1 reveal">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="万寿菊桥意象插画">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1c0e2e"/><stop offset="55%" stop-color="#4a1440"/><stop offset="100%" stop-color="#8a2a35"/>
+              </linearGradient>
+              <linearGradient id="g1b" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#e0701a"/><stop offset="45%" stop-color="#ffb347"/><stop offset="100%" stop-color="#ffe9bd"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="300" fill="url(#g1)"/>
+            <circle cx="308" cy="72" r="58" fill="#ffb347" opacity=".16"/>
+            <circle cx="308" cy="72" r="30" fill="#ffe9bd"/>
+            <circle cx="298" cy="64" r="8" fill="#f6d79a" opacity=".7"/>
+            <g fill="#ffe9bd" opacity=".8">
+              <circle cx="60" cy="46" r="1.8"/><circle cx="132" cy="26" r="1.4"/>
+              <circle cx="196" cy="58" r="1.6"/><circle cx="250" cy="34" r="1.3"/>
+              <circle cx="356" cy="150" r="1.6"/><circle cx="24" cy="96" r="1.4"/>
+            </g>
+            <!-- 远处的城 -->
+            <g fill="#150c22" opacity=".85">
+              <rect x="16" y="176" width="22" height="70"/>
+              <path d="M27 176c0-20 11-20 11-34 0 14-11 14-11 34z"/>
+              <rect x="46" y="196" width="30" height="50"/>
+              <path d="M46 196a15 10 0 0 1 30 0z"/>
+              <rect x="84" y="184" width="18" height="62"/>
+              <rect x="110" y="204" width="26" height="42"/>
+            </g>
+            <!-- 桥：三层叠色，提升对比 -->
+            <path d="M-30 268C90 196 250 172 430 216" stroke="#7a2f0d" stroke-width="52" fill="none" stroke-linecap="round"/>
+            <path d="M-30 264C90 192 250 168 430 212" stroke="url(#g1b)" stroke-width="42" fill="none" stroke-linecap="round"/>
+            <path d="M-30 258C90 186 250 162 430 206" stroke="#ffe9bd" stroke-width="5" fill="none" stroke-linecap="round" opacity=".55"/>
+            <!-- 桥上的花簇 -->
+            <g fill="#ffcf7a">
+              <circle cx="34" cy="244" r="4.4"/><circle cx="96" cy="220" r="3.6"/>
+              <circle cx="156" cy="202" r="4.2"/><circle cx="216" cy="192" r="3.4"/>
+              <circle cx="278" cy="190" r="4"/><circle cx="340" cy="198" r="3.2"/>
+              <circle cx="392" cy="208" r="4"/>
+            </g>
+            <g fill="#fff3dc" opacity=".8">
+              <circle cx="66" cy="234" r="2"/><circle cx="128" cy="212" r="1.8"/>
+              <circle cx="188" cy="198" r="2"/><circle cx="250" cy="190" r="1.8"/>
+              <circle cx="312" cy="194" r="2"/>
+            </g>
+            <!-- 行走的小身影 -->
+            <g transform="translate(214 176)">
+              <ellipse cx="1" cy="-3" rx="7" ry="8" fill="#241a2a"/>
+              <path d="M-7 4h15l4 16h-22z" fill="#241a2a"/>
+            </g>
+            <!-- 飘落花瓣 -->
+            <g fill="#f0871f">
+              <ellipse cx="86" cy="126" rx="5" ry="9" transform="rotate(24 86 126)"/>
+              <ellipse cx="180" cy="104" rx="4" ry="7" transform="rotate(-18 180 104)"/>
+              <ellipse cx="366" cy="238" rx="4.6" ry="8" transform="rotate(38 366 238)" opacity=".8"/>
+              <ellipse cx="30" cy="170" rx="3.8" ry="7" transform="rotate(-30 30 170)" opacity=".7"/>
+            </g>
+          </svg>
+          <figcaption><b>万寿菊桥</b><span>色彩：橙金 × 深紫，全片最重要的视觉母题</span></figcaption>
+        </figure>
+
+        <!-- 2 吉他 -->
+        <figure class="tile t-2 reveal">
+          <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="吉他剪影插画">
+            <rect width="200" height="200" fill="#f3e4c8"/>
+            <circle cx="100" cy="104" r="72" fill="#ffe9bd" opacity=".7"/>
+            <g transform="rotate(-10 100 100)"><use href="#ic-guitar" x="70" y="34" width="60" height="120"/></g>
+            <circle cx="100" cy="104" r="76" fill="none" stroke="#c9a87c" stroke-width="1.5" opacity=".7"/>
+          </svg>
+          <figcaption><b>吉他</b><span>白色吉他 · 从被禁用到重新被弹响</span></figcaption>
+        </figure>
+
+        <!-- 3 亡灵之城 -->
+        <figure class="tile t-3 reveal">
+          <svg viewBox="0 0 300 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="亡灵之城夜景插画">
+            <defs>
+              <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#140a24"/><stop offset="60%" stop-color="#3b1350"/><stop offset="100%" stop-color="#7d2140"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="420" fill="url(#g3)"/>
+            <g fill="#ffe9bd" opacity=".8">
+              <circle cx="40" cy="60" r="2"/><circle cx="90" cy="34" r="1.6"/>
+              <circle cx="150" cy="70" r="2.2"/><circle cx="210" cy="40" r="1.6"/>
+              <circle cx="260" cy="86" r="2"/><circle cx="120" cy="110" r="1.4"/>
+            </g>
+            <g fill="#170d24">
+              <rect x="20" y="200" width="34" height="220"/>
+              <path d="M20 200a17 17 0 0 1 34 0z"/>
+              <rect x="66" y="250" width="46" height="170"/>
+              <path d="M66 250a23 15 0 0 1 46 0z"/>
+              <rect x="124" y="160" width="30" height="260"/>
+              <path d="M139 160c0-30 12-30 12-56 0 26-12 26-12 56z"/>
+              <rect x="166" y="230" width="52" height="190"/>
+              <path d="M166 230a26 16 0 0 1 52 0z"/>
+              <rect x="230" y="190" width="36" height="230"/>
+              <path d="M230 190a18 18 0 0 1 36 0z"/>
+            </g>
+            <g fill="#ffc561" opacity=".7">
+              <rect x="30" y="230" width="4" height="10"/><rect x="44" y="266" width="4" height="10"/>
+              <rect x="78" y="280" width="4" height="10"/><rect x="96" y="316" width="4" height="10"/>
+              <rect x="132" y="196" width="4" height="10"/><rect x="142" y="240" width="4" height="10"/>
+              <rect x="178" y="262" width="4" height="10"/><rect x="200" y="300" width="4" height="10"/>
+              <rect x="240" y="222" width="4" height="10"/><rect x="256" y="264" width="4" height="10"/>
+            </g>
+            <g fill="#f0871f" opacity=".55">
+              <circle cx="60" cy="380" r="6"/><circle cx="140" cy="396" r="5"/>
+              <circle cx="220" cy="386" r="6"/><circle cx="290" cy="400" r="5"/>
+            </g>
+          </svg>
+          <figcaption><b>亡灵之城</b><span>垂直生长的灯火，是记忆堆叠成的城市</span></figcaption>
+        </figure>
+
+        <!-- 4 祭坛 -->
+        <figure class="tile t-4 reveal">
+          <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="亡灵节祭坛插画">
+            <rect width="200" height="200" fill="#f6e3c0"/>
+            <rect x="34" y="42" width="132" height="96" rx="6" fill="#fffaf0" stroke="#c9a87c" stroke-width="2"/>
+            <g fill="#c96f7a" opacity=".55">
+              <rect x="52" y="60" width="30" height="58" rx="4"/>
+              <rect x="92" y="60" width="24" height="58" rx="4" fill="#6b3f8f"/>
+              <rect x="126" y="60" width="26" height="58" rx="4" fill="#1c8b98" opacity=".6"/>
+            </g>
+            <g fill="#f0871f">
+              <rect x="20" y="150" width="160" height="7" rx="3"/>
+              <rect x="26" y="166" width="148" height="7" rx="3" opacity=".8"/>
+            </g>
+            <g fill="#b8392b">
+              <rect x="46" y="176" width="10" height="20" rx="3"/>
+              <rect x="80" y="172" width="10" height="24" rx="3" fill="#d9a63c"/>
+              <rect x="118" y="176" width="10" height="20" rx="3"/>
+              <rect x="150" y="172" width="10" height="24" rx="3" fill="#d9a63c"/>
+            </g>
+            <g fill="#ffe9bd">
+              <ellipse cx="51" cy="170" rx="4" ry="7"/><ellipse cx="85" cy="166" rx="4" ry="7"/>
+              <ellipse cx="123" cy="170" rx="4" ry="7"/><ellipse cx="155" cy="166" rx="4" ry="7"/>
+            </g>
+            <use href="#ic-marigold" x="84" y="6" width="32" height="32"/>
+          </svg>
+          <figcaption><b>祭坛 Ofrenda</b><span>照片、蜡烛、万寿菊与食物：一张回家的路标</span></figcaption>
+        </figure>
+
+        <!-- 5 花瓣 -->
+        <figure class="tile t-5 reveal">
+          <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="万寿菊花瓣插画">
+            <rect width="200" height="200" fill="#2b1145"/>
+            <circle cx="100" cy="100" r="66" fill="#f0871f" opacity=".14"/>
+            <use href="#ic-marigold" x="66" y="66" width="68" height="68"/>
+            <g fill="#f0871f" opacity=".8">
+              <ellipse cx="42" cy="52" rx="5" ry="9" transform="rotate(24 42 52)"/>
+              <ellipse cx="160" cy="70" rx="4" ry="8" transform="rotate(-20 160 70)"/>
+              <ellipse cx="150" cy="158" rx="5" ry="9" transform="rotate(40 150 158)"/>
+              <ellipse cx="50" cy="150" rx="4" ry="8" transform="rotate(-34 50 150)"/>
+              <ellipse cx="104" cy="26" rx="3.6" ry="7" transform="rotate(8 104 26)"/>
+            </g>
+          </svg>
+          <figcaption><b>花瓣与光</b><span>祝福的载体，也是引路的坐标</span></figcaption>
+        </figure>
+
+        <!-- 6 故事板 -->
+        <figure class="tile t-6 reveal">
+          <svg viewBox="0 0 800 200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="三幕结构示意图">
+            <defs>
+              <radialGradient id="g6" cx="50%" cy="50%">
+                <stop offset="0%" stop-color="#f0871f" stop-opacity=".28"/>
+                <stop offset="100%" stop-color="#f0871f" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="800" height="200" fill="#1b1024"/>
+            <ellipse cx="400" cy="100" rx="330" ry="130" fill="url(#g6)"/>
+            <path d="M110 108h580" stroke="#f0871f" stroke-width="1.6" stroke-dasharray="2 9" opacity=".85"/>
+            <g fill="none" stroke="#f0871f" stroke-width="1.6" opacity=".85">
+              <path d="M330 100l-8 8 8 8M470 100l8 8-8 8"/>
+            </g>
+            <g>
+              <circle cx="150" cy="108" r="27" fill="#2b1145" stroke="#f0871f" stroke-width="2"/>
+              <circle cx="400" cy="108" r="27" fill="#f0871f"/>
+              <circle cx="650" cy="108" r="27" fill="#2b1145" stroke="#f0871f" stroke-width="2"/>
+            </g>
+            <g font-family="Georgia,serif" font-size="24" text-anchor="middle" fill="#ffe9bd">
+              <text x="150" y="117">01</text>
+              <text x="400" y="117" fill="#2b1204">02</text>
+              <text x="650" y="117">03</text>
+            </g>
+            <g font-family="sans-serif" font-size="14" text-anchor="middle" fill="#ffe9bd" opacity=".78">
+              <text x="150" y="58">现实世界 · 逃离</text>
+              <text x="400" y="58">亡灵世界 · 寻找</text>
+              <text x="650" y="58">真相与回归 · 理解</text>
+            </g>
+            <g fill="#f0871f" opacity=".7">
+              <circle cx="60" cy="160" r="3"/><circle cx="240" cy="172" r="2.4"/>
+              <circle cx="540" cy="166" r="2.6"/><circle cx="740" cy="156" r="3"/>
+            </g>
+          </svg>
+          <figcaption><b>三幕结构</b><span>从“逃离”到“理解”：一夜之间的完整弧线</span></figcaption>
+        </figure>
+      </div>
+
+      <!-- 视频 + 音乐 -->
+      <div class="media-grid">
+        <div class="video-wrap reveal">
+          <h3 class="media-title">官方预告片</h3>
+          <!--
+            说明：为避免侵犯版权，本页不内嵌或托管任何电影视频文件。
+            若需在页面内播放，请把下方 OFFICIAL_TRAILER_ID（js/main.js）设为
+            Disney·Pixar 官方 YouTube 预告片的视频 ID，点击后将用 youtube-nocookie 播放。
+          -->
+          <div class="video-card" id="videoCard">
+            <svg class="video-poster" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="vg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#200f33"/><stop offset="55%" stop-color="#4a1240"/><stop offset="100%" stop-color="#8a2a2a"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#vg)"/>
+              <circle cx="470" cy="120" r="120" fill="#ffb347" opacity=".18"/>
+              <g fill="#160d22" opacity=".9">
+                <rect x="60" y="250" width="30" height="110"/>
+                <rect x="104" y="286" width="44" height="74"/>
+                <rect x="164" y="226" width="26" height="134"/>
+                <rect x="206" y="270" width="52" height="90"/>
+                <rect x="276" y="246" width="30" height="114"/>
+              </g>
+              <path d="M-20 330C120 268 420 250 660 300" stroke="#f0871f" stroke-width="34" fill="none" stroke-linecap="round" opacity=".9"/>
+              <g fill="#ffe9bd" opacity=".55">
+                <circle cx="120" cy="70" r="2"/><circle cx="200" cy="46" r="1.6"/>
+                <circle cx="300" cy="90" r="2.2"/><circle cx="380" cy="52" r="1.6"/>
+                <circle cx="560" cy="240" r="2"/><circle cx="590" cy="60" r="1.8"/>
+              </g>
+            </svg>
+            <a class="play" id="playBtn" href="https://www.pixar.com/coco" target="_blank" rel="noopener noreferrer" aria-label="前往皮克斯官方电影页查看预告片 在新标签页打开">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-text">前往官方页面看预告</span>
+              <span class="play-sub">Pixar 电影专页 · 新标签页打开</span>
+            </a>
+          </div>
+          <p class="video-note">
+            点击前往 Pixar《Coco》电影专页查看官方预告片入口。外部视频的可用性取决于所在网络及官方平台；若视频无法打开，仍可阅读本站完整内容。
+          </p>
+        </div>
+
+        <div class="music-wrap reveal">
+          <h3 class="media-title">原声与配乐</h3>
+          <ul class="track-list">
+            <li>
+              <span class="track-no">01</span>
+              <div>
+                <b>Remember Me</b>
+                <em>克里斯汀·安德森-洛佩兹 / 罗伯特·洛佩兹 作词作曲 · 第 90 届奥斯卡最佳原创歌曲</em>
+                <p>全片的“钥匙”：埃克托写给女儿可可的摇篮曲，被德拉库斯唱成万人合唱的金曲。</p>
+              </div>
+            </li>
+            <li>
+              <span class="track-no">02</span>
+              <div>
+                <b>Un Poco Loco</b>
+                <em>米格与埃克托在才艺舞台上的即兴合唱</em>
+                <p>歌词里的“有点疯”，正是两个不被家族接纳的人，第一次被观众接纳的瞬间。</p>
+              </div>
+            </li>
+            <li>
+              <span class="track-no">03</span>
+              <div>
+                <b>La Llorona</b>
+                <em>改编自墨西哥传统民谣，伊梅尔达的独唱段落</em>
+                <p>用一首“哭女”的哀歌，唱出她压抑了四代的委屈与仍然存在的爱。</p>
+              </div>
+            </li>
+          </ul>
+          <div class="music-legal">
+            <b>关于背景音乐</b>
+            <p>
+              以上曲目版权归 Disney·Pixar 及原著作权人所有，本页<strong>不内嵌任何音频文件</strong>。
+              可前往 <a href="https://www.disney.com/music" target="_blank" rel="noopener noreferrer">Disney Music 官方页面</a>寻找原声信息。本站仅介绍歌曲和剧情中的作用，背景保持静音。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="credit reveal">
+        <div class="credit-item">
+          <h4>素材来源</h4>
+          <p>本页插画、图标和纹样为源码内的 SVG 示意图。片名、剧情及角色英文名参考 <a href="https://www.pixar.com/coco" target="_blank" rel="noopener noreferrer">Pixar《Coco》官方电影页</a>；奖项信息可查 <a href="https://www.oscars.org/oscars/ceremonies/2018" target="_blank" rel="noopener noreferrer">第 90 届奥斯卡官方记录</a>。中文剧情和主题文字为课程展示整理。</p>
+        </div>
+        <div class="credit-item">
+          <h4>版权声明</h4>
+          <p>本页面为非商业性质的课程作业。《寻梦环游记》(Coco) 的名称、角色及相关作品信息版权归 Disney·Pixar 所有，视频以官方渠道外链方式呈现。</p>
+        </div>
+        <div class="credit-item">
+          <h4>浏览说明</h4>
+          <p>五个内容区块可通过顶部或页脚导航访问。插画、样式与脚本均随网站提供，双击 index.html 即可浏览；访问官方资料和预告片需要联网。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg class="brand-skull lg" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="14" cy="17" r="3.6" fill="currentColor"/>
+        <circle cx="26" cy="17" r="3.6" fill="currentColor"/>
+        <path d="M20 21l-3.4 6h6.8z" fill="currentColor"/>
+        <path d="M14 31h12M17.6 31v-3M22.4 31v-3" stroke="currentColor" stroke-width="1.6" fill="none"/>
+      </svg>
+      <div>
+        <b>COCO · 寻梦环游记</b>
+        <p>Web 设计课程作业 · 电影宣传与主题分析</p>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="页脚导航">
+      <a href="#home">首页</a>
+      <a href="#story">剧情</a>
+      <a href="#characters">人物</a>
+      <a href="#themes">主题</a>
+      <a href="#gallery">视听</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year">2025</span> 课程作业 · 仅供教学与展示使用，不作商业用途</p>
+    <p class="footer-quote">Remember Me, Forever.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
